@@ -1,0 +1,115 @@
+#nav {
+  float: right;
+}
+#nav ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 800px) {
+  #nav {
+    width: 200px;
+  }
+  #nav li {
+    float: left;
+    margin: 0 0 0 0.5em;
+    border: none;
+  }
+}
+h1 {
+  font-size: 1.5em;
+}
+h1 a {
+  font-size: 0.5em;
+}
+
+@media only screen and (max-width: 480px) {
+  #mygrid {
+    display: -ms-grid;
+    display: grid;
+    margin: 3px;
+    -ms-grid-columns: 100%; /*one column taking full width */
+    -ms-grid-rows: 70px auto auto auto; /*4 rows */
+  }
+  #myheader {
+    grid-row: 1;
+    grid-column: 1;
+    background-color: #eeb215;
+  }
+  #block1 {
+    grid-row: 2; /*place into row 2 / column 1*/
+    grid-column: 1;
+    background-color: #b2b0b0;
+  }
+  #block2 {
+    grid-row: 3;
+    grid-column: 1;
+    background-color: #726e6e;
+  }
+  #block3 {
+    grid-row: 4;
+    grid-column: 1;
+    background-color: #515050;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  /*make two columns and move block 3 next to 1 — just because we can*/
+  #mygrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 10px 1fr 10px 1fr 10px; /*10px columns to spacing in between*/
+    -ms-grid-rows: 100px 1fr 1fr; /*100px row and two rows each taking 1 fraction of available space*/
+    margin: 5px;
+  }
+  #myheader {
+    grid-row: 1;
+    grid-column: 1;
+    grid-column:span 5;
+    background-color: #eeb215;
+  }
+  #block1 {
+    grid-row: 2;
+    grid-column: 2;
+    background-color: #b2b0b0;
+  }
+  #block2 {
+    grid-row: 3;
+    grid-column: 2;
+    background-color: #726e6e;
+  }
+  #block3 {
+    grid-row: 2; /*block 3 can go into row 2*/
+    grid-column: 4;
+    background-color: #515050;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  #mygrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+    -ms-grid-rows: 100px 1fr;
+    margin: 5px;
+  }
+  #myheader {
+    grid-row: 1;
+    grid-column: 1;
+    grid-column: span 5;
+    background-color: #eeb215;
+  }
+  #block1 {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: #b2b0b0;
+  }
+  #block2 {
+    grid-row: 2;
+    grid-column: 3;
+    background-color: #726e6e;
+  }
+  #block3 {
+    grid-row: 2;
+    grid-column: 5;
+    background-color: #515050;
+  }
+}
